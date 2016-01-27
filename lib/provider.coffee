@@ -112,14 +112,14 @@ module.exports =
 
   buildAttributeCompletion: (attribute, tag) ->
     if tag?
-      snippet: "#{attribute}=\"$1\"$0"
+      snippet: "#{attribute}=\'$1\'$0"
       displayText: attribute
       type: 'attribute'
       rightLabel: "<#{tag}>"
       description: "#{attribute} attribute local to <#{tag}> tags"
       descriptionMoreURL: @getLocalAttributeDocsURL(attribute, tag)
     else
-      snippet: "#{attribute}=\"$1\"$0"
+      snippet: "#{attribute}=\'$1\'$0"
       displayText: attribute
       type: 'attribute'
       description: "Global #{attribute} attribute"
